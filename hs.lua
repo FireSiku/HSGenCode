@@ -70,13 +70,12 @@ local keywordReplace = {
 	--These are a bit more "hungry" and should be replaced after special cases are handled.
 	["<b>Adapt(%.?)</b>"] = "$A$%1",			-- Adapt, Adapt.
 	["<b>Battlecr[yi](:?)e?s?</b>"] = "$B$%1",	-- Battlecry, Battlecries, Battlecry:
-	["<b>Battlecry:</b>"] = "$B$:",
     ["<b>Battlecry: </b>"] = "$B$: ",
-	["<b>Combo:?</b>:?"] = "$C$:",
+	["<b>Combo(:?)</b>"] = "$C$%1",
 	["<b>Deathrattles?(:?)</b>"] = "$D$%1", 	-- Deathrattle, Deathrattles, Deathrattle:
 	["<b>Secrets?(:?)</b>"] = "$E$%1", 			-- Secret, Secrets, Secret:
 	["<b>Fr[eo]e?zen?(%.?)</b>"] = "$F$%1",		-- Freeze, Frozen, Frozen.
-	["<b>Enrage:?</b>:?"] = "$G$:",
+	["<b>Enrage(:?)</b>"] = "$G$%1",
 	["<b>Choose One</b>"] = "$H$",
 	["<b>Immune</b>"] = "$I$",
 	["<b>Lifesteal</b>"] = "$L$",
@@ -113,7 +112,6 @@ local specialReplace = {
 	["<b>Choose One %- </b>(.*); (.*)"] = "[$H$ = %1 = %2]",
 	["<b>Spell Damage %+(%d)</b>"] = "$M%1$",
 	["<b>Overload:</b> %((%d)%)"] = "$O%1$ ",
-	--["<b>Overload:</b> %((%d)%-(%d)%)"] = "$O%1-%2$ ", -- Hearthpwn made overload mechanic with random value.
 	["<b>Quest:</b> (.*) <b>Reward:</b> (.*)"] = "[$Q$ = %1 = %2]",
 
 	--Special cases that combine multiple keywords.
