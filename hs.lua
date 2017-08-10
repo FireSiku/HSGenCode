@@ -160,7 +160,7 @@ local nameReplace = {
 	["<b>Jade Golem</b>"] = "{Jade Golem}", -- .* Needed because Jade Spirit uses non-space character.
 	["<b>Death Knight</b>"] = "{Death Knight}",
 	["<?b?>?[Ll]egendary<?/?b?>?"] = "{Legendary}",
-	["<?b?>?(Spare Parts?)<?/?b?>?"] = "{%1}",
+	["<?b?>?(Spare Parts?)(%.?)<?/?b?>?"] = "{%1}%2",
 	["<?b?>?(Hero Power)<?/?b?>?"] = "{%1}",
 	["([Mm]ana [Cc]rystals?)"] = "{%1}",
 	
