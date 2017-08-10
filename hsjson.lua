@@ -18,7 +18,7 @@ local DUMP_FILE = "cardlist.txt"
 local legitCardTypes = { "SPELL", "MINION", "WEAPON", "HERO", }
 local excludedSets = {"CREDITS", "MISSIONS", "TB", }
 local whitelistedTBs = {"TB_KTRAF", "BRMC"} -- KT vs Rafaam, Nefarian vs Rag
-local blacklistedIDs = {
+local blacklistedIDs = {
     "LOEA04", -- Temple Escape
     "LOEA07", -- Brann Minecart
     "KAR_A10", -- Chess Event

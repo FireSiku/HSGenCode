@@ -234,7 +234,7 @@ function format_card(card)
     local atk = card.attack or 0
     local hp = (card.health or card.durability) or 0
      --Make sure spells aren't considered 0/0
-    if card.type = "Spell" then atk, hp = "", "" end
+    if card.type == "Spell" then atk, hp = "", "" end
 
     -- Card Text can be dynamic, if so, card.collectionText will exist, showing the "static" card text from the Collection Manager. 
     local text
@@ -245,7 +245,7 @@ function format_card(card)
     end
 
     --Last minute filters
-    if (text == "$T$" or text = "") and not card.collectible then return end -- Get rid of the plethora of uncollectible taunt/vanilla minions/tokens
+    if (text == "$T$" or text == "") and not card.collectible then return end -- Get rid of the plethora of uncollectible taunt/vanilla minions/tokens
     if (text == "" and rarity == "Legendary") then return end -- Get rid of legendaries without effects
 
     return string.format(HS_CARD_FORMAT, name, class, race, cardType, rarity, mana, atk, hp, text)
