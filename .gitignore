@@ -1,7 +1,6 @@
 #HSGenCode Specific Ignores
-cardlist.txt
-err.txt
 input.txt
+logs/
 
 #Compiled Lua sources
 luac.out
